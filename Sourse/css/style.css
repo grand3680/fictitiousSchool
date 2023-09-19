@@ -9,6 +9,7 @@ body {
 h1 {
     color: #333;
     margin-top: 20px;
+	font-family: cursive;
 }
 
 #quiz-container {
@@ -23,6 +24,7 @@ h1 {
     font-size: 20px;
     margin-bottom: 20px;
     color: #333;
+	font-family: fantasy;
 }
 
 
@@ -32,6 +34,7 @@ h1 {
 }
 
 #options-list li {
+	font-family: cursive;
 	width: 300px;
 	min-height: 25px;
 	margin: 10px auto !important;
@@ -95,13 +98,13 @@ h1 {
     }
 
     #options-list li {
+		font-size: 30px;
         margin: 5px 0;
         padding: 5px;
-        font-size: 16px;
 		width: 100%;
 		height: 80px;
 		text-align: center;
-		jactify-align: center;
+		juctify-align: center;
     }
 
     #next-button {
