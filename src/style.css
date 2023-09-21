@@ -33,6 +33,7 @@ font-family: fantasy;
   padding: 0;
 }
 
+
 #options-list li {
   font-family: cursive;
   width: 300px;
@@ -107,6 +108,9 @@ font-family: fantasy;
   }
 
   #next-button {
+      width: 90%;
+      height: 50px;
+      font-size: 25px;
       margin-top: 1px;
   }
 }

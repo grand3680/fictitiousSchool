@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import commonjs from "vite-plugin-commonjs";
 import { viteSingleFile } from "vite-plugin-singlefile";
 
+
 export default defineConfig({
   base: './',
   root: './src',
