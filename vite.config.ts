@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import commonjs from "vite-plugin-commonjs";
 import { viteSingleFile } from "vite-plugin-singlefile";
 
+import { createHtmlPlugin } from 'vite-plugin-html';
 
 export default defineConfig({
   base: './',
@@ -26,5 +27,8 @@ export default defineConfig({
   plugins: [
     commonjs(),
     viteSingleFile(),
+    createHtmlPlugin({
+        minify: true,
+    })
   ],
 });
