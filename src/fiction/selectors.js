@@ -5,6 +5,7 @@ var nextButton = document.getElementById("next-button");
 var resultContainer = document.getElementById("result-container");
 var resultText = document.getElementById("result-text");
 var countQuestion = document.getElementById("countQuestion");
+var resetQuestion = document.getElementById("resetQuestion");
 
 
 export var config = {
@@ -15,4 +16,5 @@ export var config = {
     "resultContainer" : resultContainer,
     "resultText" : resultText,
     "countQuestion" : countQuestion,
+    "resetQuestionBtw" : resetQuestion
 }
