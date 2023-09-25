@@ -1,4 +1,4 @@
-import "../style.css";
+import "../style.scss";
 import questions from './questions.json';
 import {config} from "./selectors";
 

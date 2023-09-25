@@ -1,3 +1,4 @@
+@import './reset';
 body {
   font-family: 'Arial', sans-serif;
   text-align: center;
@@ -24,43 +25,39 @@ h1 {
   font-size: 20px;
   margin-bottom: 20px;
   color: #333;
-font-family: fantasy;
+  font-family: fantasy;
 }
 
 
 #options-list {
   list-style-type: none;
   padding: 0;
+
+  li {
+    font-family: cursive;
+    width: 300px;
+    min-height: 25px;
+    margin: 10px auto !important;
+    background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+    margin: 10px 0;
+    padding: 12px;
+    background-color: #0074D9;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+
+    &:hover {
+      background-color: #0056b3;
+      filter: hue-rotate(-500deg);
+    }
+  }  
 }
 
-
-#options-list li {
-  font-family: cursive;
-  width: 300px;
-  min-height: 25px;
-  margin: 10px auto !important;
-  background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
-  margin: 10px 0;
-  padding: 12px;
-  background-color: #0074D9;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.8s ease-in-out;
-}
-
-#options-list li:hover {
-  background-color: #0056b3;
-}
 
 .second {
   background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
 }
-
-#options-list li:hover {
-  filter: hue-rotate(-500deg);
-}
-
 
 
 .button-question {
@@ -72,10 +69,10 @@ font-family: fantasy;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-}
 
-.button-question:hover {
-  background-color: #555;
+  &:hover {
+    background-color: #555;
+  }  
 }
 
 #result-container {

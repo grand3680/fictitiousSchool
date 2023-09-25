@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "rollup-plugin-html-minifier": "^2.0.0",
+    "sass": "^1.68.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-html": "^3.2.0"
