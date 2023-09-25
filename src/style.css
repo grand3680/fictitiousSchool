@@ -63,7 +63,7 @@ font-family: fantasy;
 
 
 
-#next-button {
+.button-question {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #333;
@@ -74,7 +74,7 @@ font-family: fantasy;
   transition: background-color 0.3s ease-in-out;
 }
 
-#next-button:hover {
+.button-question:hover {
   background-color: #555;
 }
 
@@ -103,11 +103,11 @@ font-family: fantasy;
     margin: 5px 0;
     padding: 5px;
     width: 100%;
-    height: 80px;
+    min-height: 80px;
     text-align: center;
   }
 
-  #next-button {
+  .button-question {
       width: 90%;
       height: 50px;
       font-size: 25px;

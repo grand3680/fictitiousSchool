@@ -6,18 +6,20 @@
     <title>Vite + Js</title>
   </head>
   <body>
-    <h1>Фикторина по информатике</h1>
+    <h1>Викторина по информатике</h1>
     <h1>вы на : <span id="countQuestion"></span></h1>
     <div id="quiz-container">
         <p id="question-text">Вопрос будет отображен здесь</p>
         <ul id="options-list">
             <!-- Варианты ответов будут добавлены программно с помощью JavaScript -->
         </ul>
-        <button id="next-button">Следующий вопрос</button>
+        <button class="button-question" id="next-button">Следующий вопрос</button>
+        <button class="button-question" id="resetQuestion">начать сначало</button>        
     </div>
     <div id="result-container">
         <p id="result-text">Ваш результат: </p>
     </div>
+
 
     <script type="module" src="./fiction/index.js"></script>
   </body>
