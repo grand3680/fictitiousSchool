@@ -6,6 +6,9 @@ import {config} from "./selectors";
 let currentQuestion = 0; // текущий вопрос
 let score = 0; // кол-во правильных ответов
 
+config.resetQuestionBtw.addEventListener("click", () => {
+    resetQuestion();
+})
 
 // показывает вопросы, берёт currentIndex от вопросов
 function showQuestion() {
@@ -32,6 +35,16 @@ function showResult() {
     config.quizContainer.style.display = "none";
     config.resultContainer.style.display = "block";
     config.resultText.textContent = `Ваш результат: ${score} из ${questions.length} правильных ответов.`;
+}
+
+// показывает результат
+function resetQuestion() {
+    config.quizContainer.style.display = "block";
+    config.resultContainer.style.display = "none";
+    currentQuestion = 0;
+    score = 0;
+
+    showQuestion();
 }
 
 // проверяет ответ по индексу
