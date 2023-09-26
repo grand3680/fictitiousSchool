@@ -85,6 +85,35 @@ h1 {
   color: #333;
 }
 
+.hidden {
+  display: none;
+}
+
+#result-questions {
+  text-align: start;
+  font-family: cursive;
+  margin: 20px auto;
+  width: 80%;
+  h2 {
+    font-size: 30px;
+    color: red;
+    margin-top: 40px;
+  }
+
+  li {
+    list-style: none;
+    font-size: 25px;
+    padding: 5px;
+  }
+  li.correct {
+    background-color: #37B14A;
+  }
+
+  li.uncorrect {
+    background-color: #ce412e;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #quiz-container {
     padding: 10px;
@@ -109,5 +138,10 @@ h1 {
       height: 50px;
       font-size: 25px;
       margin-top: 1px;
+  }
+
+  
+  #result-questions {
+    width: 90% !important;
   }
 }

@@ -8,16 +8,22 @@
   <body>
     <h1>Викторина по информатике</h1>
     <h1>вы на : <span id="countQuestion"></span></h1>
-    <div id="quiz-container">
+    <h1 id="timer-list">время на викторине в секундах </h1>
+    <div class="hidden" id="quiz-container">
         <p id="question-text">Вопрос будет отображен здесь</p>
         <ul id="options-list">
-            <!-- Варианты ответов будут добавлены программно с помощью JavaScript -->
+            <!-- Варианты ответов будут добавлены с помощью JavaScript -->
         </ul>
         <button class="button-question" id="next-button">Следующий вопрос</button>
   
     </div>
     <div id="result-container">
         <p id="result-text">Ваш результат: </p>
+        <button class="button-question" id="result-questions_button">показать вопросы</button>        
+        <p class="hidden" id="result-questions">
+          Зелённым правильные варианты, <br>
+          а красное если вы выбрали не правильные
+        </p>
     </div>
     <button class="button-question" id="resetQuestion">начать сначало</button>        
 

@@ -16,12 +16,16 @@ function checkAnswer(selectedIndex) {
 config.optionsList.addEventListener("click", (event) => {
     if (event.target.matches("li")) {
         const selectedIndex = parseInt(event.target.dataset.index);
+        var answer = config.saveQuestion[config.currentQuestion - 1];
+        answer.yourAnswer = selectedIndex;
+
         checkAnswer(selectedIndex);
         showQuestion(questions);
     }
 });
 
-config.resetQuestionBtw.addEventListener("click", () => resetQuestion(questions));
+config.resetQuestion.addEventListener("click", () => resetQuestion(questions));
 config.nextButton.addEventListener("click", () => showQuestion(questions));
+config.questionsButton.addEventListener("click", () => config.result_questions.classList.remove("hidden"));
 
-showQuestion(questions);
+// showQuestion(questions);
