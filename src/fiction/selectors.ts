@@ -20,6 +20,7 @@ var config : conf = {
 
     "saveQuestion"     : questions,
     "quizContainer"    : quizContainer,
+    "userInfo"         : {},
 
     "optionsList"      : optionsList,
     "questionText"     : questionText,

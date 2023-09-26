@@ -7,6 +7,55 @@ body {
   padding: 0;
 }
 
+#userLogins {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  #userLogins {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}
+
+
+#loginName {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+
+  background-color: rgba(190, 149, 149, 0.8);
+
+  h2 {
+    color: rgb(226, 58, 58);
+    font-size: 35px;
+    margin-top: 5px;
+    font-family: fantasy;
+  }
+
+  form {
+    text-align: start;
+    padding: 0 25px;
+    label {
+      display: center;
+      font-size: 25px;
+      font-family: cursive;
+    }
+    input {
+      display: block;
+    }
+  }
+}
+
 h1 {
   color: #333;
   margin-top: 20px;
@@ -143,5 +192,21 @@ h1 {
   
   #result-questions {
     width: 90% !important;
+  }
+}
+
+.icons-github {
+  font-size: 25px;
+  list-style: none;
+}
+
+.gitHub {
+  border: 1px black solid;
+  color: #ff7f50;
+  list-style: none;
+  text-decoration: none;
+
+  h2:hover {
+    color: #fd4400;
   }
 }

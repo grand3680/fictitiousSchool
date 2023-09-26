@@ -2,6 +2,7 @@ export interface conf {
     "currentQuestion"  : number,
     "score"            : number,
     "saveQuestion"     : ShowQuestion[],
+    "userInfo"?        : userInf,
     "quizContainer"    : any | null,
     "optionsList"      : any | null,
     "questionText"     : any | null,
@@ -25,4 +26,10 @@ export interface ShowQuestion {
     "options": String[],
     "correctAnswer": number,
     "yourAnswer"? : String
+}
+
+export interface userInf {
+    "Name"? : string,
+    "Second-Name"? : string,
+    "Class"? : string,
 }

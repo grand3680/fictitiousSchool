@@ -9,14 +9,36 @@
     <h1>Викторина по информатике</h1>
     <h1>вы на : <span id="countQuestion"></span></h1>
     <h1 id="timer-list">время на викторине в секундах </h1>
+    <h2 id="userLogins"></h2>
+
+    <div class="loginAuth" id="loginName">
+      <h2>зарегайтесь</h2>
+      <form>
+        <label>введите сюда своё имя</label>
+        <input id="FORMname" required type="text">
+
+        <label>введите сюда своё фамилию</label>
+        <input id="FORMsecName" required type="text">
+
+        <label>введите сюда свой класс</label>
+        <input id="FORMclass" required  type="text">
+
+        <label>введите сюда номер своей банковской карты ;D</label>
+        <input Optional type="text">
+        <input type="submit" value="начать сначало" class="button-question" id="resetQuestion">              
+      </form>
+    
+    </div>
+
     <div class="hidden" id="quiz-container">
-        <p id="question-text">Вопрос будет отображен здесь</p>
+        <p id="question-text">Вопрос будет отображен здесь в секундах</p>
         <ul id="options-list">
             <!-- Варианты ответов будут добавлены с помощью JavaScript -->
         </ul>
         <button class="button-question" id="next-button">Следующий вопрос</button>
   
     </div>
+    <!-- <button class="button-question" id="resetQuestion">начать сначало</button>           -->
     <div id="result-container">
         <p id="result-text">Ваш результат: </p>
         <button class="button-question" id="result-questions_button">показать вопросы</button>        
@@ -25,8 +47,10 @@
           а красное если вы выбрали не правильные
         </p>
     </div>
-    <button class="button-question" id="resetQuestion">начать сначало</button>        
-
-    <script type="module" src="./fiction/index.js"></script>
+ 
+    <a href="https://github.com/grand3680/fictitiousSchool" target="_blank" title="GitHub Repository" class="gitHub">
+      <h2 class="icons-github">ссылка на исходники</h2>
+    </a>
+    <script type="module" src="./fiction/index.js"></script> 
   </body>
 </html>

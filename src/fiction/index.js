@@ -5,6 +5,31 @@ import config from "./selectors";
 import showQuestion from "./func/showQuestion";
 import resetQuestion from "./func/resetQuestion";
 
+var Logins = document.getElementById("loginName");
+var userName = document.getElementById("userLogins");
+
+Logins.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var Name = document.getElementById('FORMname').value;
+    var SecondName = document.getElementById('FORMsecName').value;
+    var Class = document.getElementById('FORMclass').value;
+
+    if (Name && SecondName && Class) {
+        config.userInfo = {
+            "Name" : Name,
+            "Second-Name" : SecondName,
+            "Class" : Class,
+        }
+        Logins.classList.add("hidden");
+        resetQuestion(questions)        
+
+        for (let [key, value] of Object.entries(config.userInfo)) {
+            userName.textContent += `${value} `; // name:John, затем age:30
+        }
+    }
+});
+
+
 
 // проверяет ответ по индексу
 function checkAnswer(selectedIndex) {
@@ -24,7 +49,7 @@ config.optionsList.addEventListener("click", (event) => {
     }
 });
 
-config.resetQuestion.addEventListener("click", () => resetQuestion(questions));
+// config.resetQuestion.addEventListener("click", () => resetQuestion(questions));
 config.nextButton.addEventListener("click", () => showQuestion(questions));
 config.questionsButton.addEventListener("click", () => config.result_questions.classList.remove("hidden"));
 

@@ -2,33 +2,34 @@ import config from "../selectors";
 import {question} from "../types";
 import showResult from "./showResult";
 
-
 var interval : any;
 var isActive : boolean = false;
+var time : number = 0;
 
-var startTimer = (desp : string) : void => {
-    var time = 0;
+let element : any = document.getElementById("timer-list");
+var desp : string = "время на викторине в секундах";
 
-    let element : any = document.getElementById("timer-list");
-
-    interval = setInterval(() => {
-        time += 1;
-        element.textContent = `${desp} - ${time}`;
-    }, 1000)
-    interval;    
+function setName() : void {
+    element.textContent = `${desp} - ${time}`;    
 }
-
 
 
 // показывает вопросы, берёт currentIndex от вопросов
 function showQuestion(questions : question[]) : void {
     if (!isActive) {
-        startTimer("время на викторине в секундах");    
+        interval = setInterval(() => {
+            time += 1;
+            setName();
+        }, 1000)
+        
+        interval;    
         isActive = true;
     }
     // Показывает результат если кол-во вопросов закончилось
     if (config.currentQuestion >= questions.length) {
+        desp = "всего потратили на тест";
         clearInterval(interval);
+        setName();
         showResult(questions);
     }
 
