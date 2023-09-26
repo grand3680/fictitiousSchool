@@ -24,12 +24,10 @@ Logins.addEventListener('submit', function(event) {
         resetQuestion(questions)        
 
         for (let [key, value] of Object.entries(config.userInfo)) {
-            userName.textContent += `${value} `; // name:John, затем age:30
+            userName.textContent += `${value} `;
         }
     }
 });
-
-
 
 // проверяет ответ по индексу
 function checkAnswer(selectedIndex) {
@@ -49,8 +47,5 @@ config.optionsList.addEventListener("click", (event) => {
     }
 });
 
-// config.resetQuestion.addEventListener("click", () => resetQuestion(questions));
 config.nextButton.addEventListener("click", () => showQuestion(questions));
 config.questionsButton.addEventListener("click", () => config.result_questions.classList.remove("hidden"));
-
-// showQuestion(questions);
