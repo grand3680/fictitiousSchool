@@ -25,6 +25,59 @@ body {
 	}
 
 }
+.specious {
+  transition: all 10.5s infinite;
+  animation: rainbow 0.5s infinite;
+
+  #quiz-container {
+    text-align:end;
+
+    animation: speciousAnim 0.5s infinite;
+    
+  }
+}
+
+@keyframes speciousAnim {
+  0% { 
+    text-align:end;
+    margin: 100px;
+  }
+  50% { 
+    text-align: center;
+    margin: 110px;
+  }
+  100% { 
+    text-align: start;
+    margin: 90px;
+  }
+}
+
+.grand {
+  background-image: url("https://carmasters.org/uploads/monthly_2021_12/1e81043c4a668cd5d627c1827c7b5bf0_i-360.gif.422a68a713a8c80f6319a0306f8f7ffc.gif");
+  color : white !important;
+  background-color: black !important;
+}
+
+.grand2 {
+  font-size: 30px;
+  animation: rainbow 0.5s infinite;
+}
+
+@keyframes rainbow {
+  0% { 
+    color: red;
+    font-size: 30px;
+  }
+  50% { 
+    color: white;
+    font-size: 35px;
+  }
+  100% { 
+    color: orange;
+    font-size: 30px;
+  }
+}
+
 
 
 #loginName {

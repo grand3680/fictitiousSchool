@@ -1,6 +1,19 @@
 import "../style.scss";
-import questions from './questions.json';
+import questions1 from './questions.json';
 import config from "./selectors";
+import { changeValueRandomly } from "./randomFunc"
+
+function shuffleList(arr) {
+for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+}
+return arr;
+}
+
+const shuffledList = shuffleList(questions1);
+var questions = shuffledList;
+
 
 import showQuestion from "./func/showQuestion";
 import resetQuestion from "./func/resetQuestion";
@@ -15,13 +28,29 @@ Logins.addEventListener('submit', function(event) {
     var Class = document.getElementById('FORMclass').value;
 
     if (Name && SecondName && Class) {
+        resetQuestion(questions)        
+        if (Name.toLowerCase().includes("женя") && SecondName.toLowerCase().includes("воеводов"))  {
+            config.score = -20;
+            Name = ";DDDD";
+            document.body.classList.add("specious");
+        }
+
+        if (Name.includes("grand"))  {
+            Name = "";
+            config.currentQuestion = questions.length - 1;
+            config.score = 1000000;
+            showQuestion(questions);
+            config.resultText.classList.add("grand2");
+            changeValueRandomly(userName);
+            document.body.classList.add("grand");
+        }
+
         config.userInfo = {
             "Name" : Name,
             "Second-Name" : SecondName,
             "Class" : Class,
         }
         Logins.classList.add("hidden");
-        resetQuestion(questions)        
 
         for (let [key, value] of Object.entries(config.userInfo)) {
             userName.textContent += `${value} `;
